@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>JASO | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="hero">
+  <div class="cover-rules">
+    <div class="rules">
+      <div class="header-rules">
+        <h2>RULES</h2>
+        <button class="close-cover"><img src="./images/icon-close.svg" alt=""></button>
+      </div>
+      <div>
+        <img src="./images/image-rules.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!--score-->
+  <div class="score-title">
+    <div class="title">
+      <h2>ROCK</h2>
+      <h2>PAPER</h2>
+      <h2>SCISSORS</h2>
+    </div>
+    <div class="score">
+      <small>SCORE</small>
+      <p class="score-number">00</p>
+    </div>
+  </div>
+  <!--resultados-->
+  <div class="results">
+    <div class="result-div" id="userImg">
+      <h2>YOU PICKED</h2>
+      <div class="win"></div>
+      <div class="item-results paper" ><img src="./images/icon-paper.svg" alt=""></div>
+    </div>
+    <div class="response">
+      <h2 class="result-text"></h2>
+      <button class="btnAgain">PLAY AGAIN</button>
+    </div>
+    <div class="result-div" id="machineImg">
+      <h2>THE HOUSE PICKED</h2>
+      <div class="item-results none rock"  ><img src="./images/icon-rock.svg" alt=""></div>
+    </div>
+  </div>
+  <section class="userOptions">
+      
+    <img class="triangle" src="./images/bg-triangle.svg" alt="">
+    <button class="item" id="paper"><img src="./images/icon-paper.svg" alt="paper"></button>
+    <button class="item" id="scissors"><img src="./images/icon-scissors.svg" alt="scissors"></button>
+    <button class="item" id="rock"><img src="./images/icon-rock.svg" alt="rock"></button>
+  </section>
+
+  <footer>
+    <button class="btn-rules">RULES</button>
+  </footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,
+body{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.hero{
+    background:radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+/*cover*/
+.cover-rules{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.rules{
+    background-color: #fff;
+    position: relative;
+    min-height: 400px;
+    width: 400px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.header-rules{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 20px;
+}
+.header-rules button{
+    background: none;
+    border: none;
+}
+/**score*/
+.score-title{
+    display: block;
+    margin: 0 auto;
+    width: 40vw;
+    border: 2px solid #fff9;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    height: 5rem;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+.score-title .score{
+    background:#fff;
+    color:#34495E;
+    text-align: center;
+    width: 100px;
+    padding:7px 5px;
+    border-radius: 5px;
+}
+.score-title .score p{
+    font-size: 3rem;
+    font-weight: bold;
+}
+/*results*/
+.results{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    position: relative;
+    color: #fff;
+    display: none;
+}
+.response{
+    text-align: center;
+}
+.btnAgain{
+    height: 2rem;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: none;
+}
+.item-results{
+    background: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: solid 15px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.win{
+    width: 180px;
+    height: 180px;
+    z-index: 999;
+    background: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3rem rgba(255, 255, 255, 0.10),0 0 0 6rem rgba(255, 255, 255, 0.05), 0 0 0 8rem rgba(255, 255, 255, 0.02);
+    position: absolute;
+    bottom: 0;
+}
+
+.item-results img{
+    width: 50%;
+}
+
+
+.results div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+.results .result-div{
+    justify-content: space-between;
+}
+
+.item-results.scissors{
+    border: solid 15px hsl(40, 84%, 53%);
+    box-shadow: 0px 6px 1px hsl(35, 89%, 39%), inset 0px 5px 1px #aaa9;
+}
+.item-results.paper{
+    border: solid 15px  hsl(230, 89%, 62%);
+    box-shadow: 0px 6px 1px hsl(240, 89%, 59%), inset 0px 5px 1px #aaa9;
+}
+.item-results.rock{
+    border: solid 15px hsl(349, 71%, 52%);
+    box-shadow: 0px 6px 1px hsl(353, 71%, 42%), inset 0px 5px 1px #aaa9;
+}
+
+/**userOptions*/
+.userOptions{
+    margin-top: 50px;
+    width: 30vw;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+.flex{
+    display: flex;
+}
+.triangle{
+    position: absolute;
+    top: 90px;
+    width: 250px;
+}
+.item{
+    z-index: 99;
+    background: #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: solid 15px;
+    margin:20px 20px;
+    cursor: pointer;
+}
+
+#scissors{
+    border: solid 15px hsl(40, 84%, 53%);
+    box-shadow: 0px 6px 1px hsl(35, 89%, 39%), inset 0px 5px 1px #aaa9;
+}
+#paper{
+    border: solid 15px  hsl(230, 89%, 62%);
+    box-shadow: 0px 6px 1px hsl(240, 89%, 59%), inset 0px 5px 1px #aaa9;
+}
+#rock{
+    border: solid 15px hsl(349, 71%, 52%);
+    box-shadow: 0px 6px 1px hsl(353, 71%, 42%), inset 0px 5px 1px #aaa9;
+}
+
+footer{
+    width: 100%;
+    position: relative;
+    text-align: right;
+}
+footer button{
+    margin-right: 50px;
+    height: 40px;
+    width: 120px;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+}
+@media (max-width:1200px){
+    .triangle{
+        top: 100px;
+        width: 350px;
+    }
+    .userOptions{
+        width: 600px;
+        margin-top: 0;
+    }
+    .item{
+        width: 180px;
+        height: 180px;
+    }
+}
+@media (max-width:900px){
+    .triangle{
+        top: 7rem;
+    }
+    .userOptions{
+        width: 60vw;
+    }
+}
+@media (max-width:700px){
+    .score-title{
+        width: 80vw;
+    }
+    .userOptions{
+        width: 70vw;
+    }
+    .results{
+        width: 100vw;
+        text-align: center;
+        font-size: .6rem;
+    }
+    .item-results{
+        width: 100px;
+        height: 100px;
+        margin: 0 5px;
+    }
+    .response{
+        width: 100%;
+    }
+    .response * {
+        text-align: center;
+        width: 80px;
+    }
+    .win{
+        width: 130px;
+        height: 130px;
+        background:none;
+        box-shadow: 0 0 0 2rem rgba(255, 255, 255, 0.10),0 0 0 4rem rgba(255, 255, 255, 0.05), 0 0 0 6rem rgba(255, 255, 255, 0.02);
+    }
+    footer button{
+        margin: auto 10px;
+    }
+}
+@media (max-width:600px){
+    .userOptions{
+        width: 90vw;
+    }
+}
+@media (max-width:500px){
+    .userOptions{
+        width: 90vw;
+        height: auto;
+    }
+    .triangle{
+        position: absolute;
+        top: 80px;
+        width: 200px;
+        bottom: 0;
+    }
+    .item{
+        z-index: 99;
+        background: #fff;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+    }
+}
+@media (max-width:400px){
+    .triangle{
+        position: absolute;
+        top: 70px;
+        width: 200px;
+        bottom: 0;
+    }
+    .userOptions img{
+        width: 50%;
+    }
+}
+@media (max-width:300px){
+    .triangle{
+        position: absolute;
+        top: 60px;
+        width: 200px;
+        bottom: 0;
+    }
+    .userOptions{
+        width: 100vw;
+    }
+    .item{
+        width: 90px;
+        height: 90px;
+    }
+}
