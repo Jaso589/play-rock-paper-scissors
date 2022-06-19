@@ -2,6 +2,7 @@ const $paper = document.getElementById('paper'),
     $scissor = document.getElementById('scissors'),
     $rock = document.getElementById('rock'),
     $btnRules = document.querySelector('.btn-rules'),
+    $cover = document.querySelector('.cover-rules')
     $closeCover = document.querySelector('.close-cover'),
     $playAgain = document.getElementById('play-again'),
     $userImg = document.getElementById('userImg'),
@@ -50,9 +51,17 @@ const $paper = document.getElementById('paper'),
         $btnAgain.classList.remove('block')
         $resultText.innerHTML = '';
     })
-    document.addEventListener('click', ()=>{    
-        $points.innerHTML = `${i}`
+
+    $btnRules.addEventListener('click', () =>{
+        $cover.classList.add('flex')
     })
+    $closeCover.addEventListener('click', ()=>{
+        $cover.classList.remove('flex');
+
+    })
+    // document.addEventListener('click', ()=>{    
+    //     $points.innerHTML = `${i}`
+    // })
     function play(option){
         $userImg.innerHTML = `
         <h2>YOU PICKED</h2>
@@ -86,7 +95,6 @@ const $paper = document.getElementById('paper'),
             
             `
             
-           
             switch(result){
                 case 'TIE':
                     $resultText.innerHTML = `YOU HAVE TIED`;
@@ -102,6 +110,10 @@ const $paper = document.getElementById('paper'),
                     if(i < 0) i = 0;
                     break;
             }
+            if(result){
+                $points.innerHTML = `${i}`
+            }
+           
 
         },2000)
         
