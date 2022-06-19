@@ -240,6 +240,23 @@ footer button{
     }
 }
 @media (max-width:700px){
+    
+    .header-rules{
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 999;
+    }
+    .rules{
+        height: 100vh;
+        border-radius: 0;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
     .score-title{
         width: 80vw;
     }
